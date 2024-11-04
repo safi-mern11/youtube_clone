@@ -62,14 +62,14 @@ const VideoDetails = () => {
                                 <div className="flex h-11 w-11 rounded-full overflow-hidden">
                                     <img
                                         className="h-full w-full object-cover"
-                                        src={video?.author?.avatar[0]?.url}
+                                        src={video?.author?.avatar&&video?.author?.avatar[0]?.url}
                                     />
                                 </div>
                             </div>
                             <div className="flex flex-col ml-3">
                                 <div className="text-white text-md font-semibold flex items-center">
                                     {video?.author?.title}
-                                    {video?.author?.badges[0]?.type ===
+                                    {video?.author?.badges&&video?.author?.badges[0]?.type ===
                                         "VERIFIED_CHANNEL" && (
                                         <BsFillCheckCircleFill className="text-white/[0.5] text-[12px] ml-1" />
                                     )}
